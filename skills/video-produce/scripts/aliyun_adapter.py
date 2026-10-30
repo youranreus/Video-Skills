@@ -51,6 +51,11 @@ def endpoint(connection):
     region = connection["region"]
     explicit = connection.get("endpoint")
     if explicit:
+        # Token Plan has a separate official gateway and needs no WorkspaceId.
+        if explicit.rstrip("/") == "https://token-plan.maas.qianwenaiapi.com/api/v1":
+            if region != "cn-beijing":
+                raise ValueError("China Token Plan requires cn-beijing; no region fallback")
+            return explicit.rstrip("/")
         parsed = urlparse(explicit)
         if (
             parsed.scheme != "https"

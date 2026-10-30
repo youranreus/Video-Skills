@@ -33,6 +33,17 @@ class IntegrationTests(unittest.TestCase):
             "https://test-workspace.cn-beijing.maas.aliyuncs.com/api/v1",
         )
 
+    def test_token_plan_endpoint(self):
+        url = "https://token-plan.maas.qianwenaiapi.com/api/v1"
+        self.assertEqual(adapter.endpoint({"region": "cn-beijing", "endpoint": url}), url)
+        for region, endpoint in [
+            ("ap-southeast-1", url),
+            ("cn-beijing", url.replace("/api/v1", "/compatible-mode/v1")),
+            ("cn-beijing", url.replace("qianwenaiapi.com", "qianwenaiapi.com.example.com")),
+        ]:
+            with self.assertRaises(ValueError):
+                adapter.endpoint({"region": region, "endpoint": endpoint})
+
     def test_cross_episode_and_version_immutability(self):
         self.assertTrue(w.check(self.root)["ok"])
         _, old = w.asset(self.root, "CHAR-LIN@v001")

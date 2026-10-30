@@ -13,10 +13,12 @@
 - https://help.aliyun.com/en/model-studio/qwen-audio-tts-http-api
 - https://help.aliyun.com/en/model-studio/get-temporary-file-url
 
-未进行真实调用。接口字段与地域可用性需要首次真实样片再验收。未导入私人 Qingyi 2 媒体；个人经验由各作品本地保存，不随公共示例分发。
+初版仅做离线验收；后续真实调用结果见 docs/acceptance.md。未导入私人 Qingyi 2 媒体；个人经验由各作品本地保存，不随公共示例分发。
 
 ## 保留工具的边界
 
 原有 Dashboard、旧初始化/导出以及旧五文档检查脚本保留用于上游格式参考与回归；整合版技能入口不调用它们。整合版的生产引擎沿用同一套 .short-drama 元数据，并由 workflow/workspace 在准备与执行前实施资产和规则检查。原有剪辑工具继续处理明确的媒体路径，新增音轨编排作为补充。
 
 通过 skills CLI 分发时，各技能目录携带上游 LICENSE；video-write 的山音参考目录另附原 LICENSE 和 UPSTREAM-README.md，以保留单独安装后的署名与分发说明。
+
+Token Plan 独立网关依据：https://platform.qianwenai.com/docs/token-plan/best-practices/multimodal-generation （2026-10-30 核对）。不再将 WorkspaceId 作为所有官方接入方式的必要条件。

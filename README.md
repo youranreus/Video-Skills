@@ -2,7 +2,7 @@
 
 个人 AI 视频制作技能套件：山音编剧 → 项目资产库 → 分镜与参考图 → Wan 3.0 / Qwen TTS → 剪辑 → 经验回流。
 
-版本 0.1.0。Python 3.11+，核心脚本仅使用标准库。视频/非 WAV 音频检查和混音需要 ffmpeg/ffprobe。没有调用付费 API；离线夹具不代表生成质量。
+版本 0.1.0。Python 3.11+，核心脚本仅使用标准库。视频/非 WAV 音频检查和混音需要 ffmpeg/ffprobe。离线夹具不代表生成质量；真实接口验证记录见验收报告。
 
 ## 安装与使用
 
@@ -81,3 +81,7 @@ python3 scripts/validate_skills.py
 ## 来源
 
 基于 [drama-skills](https://github.com/zenstory-ai/drama-skills) 与由 **@山音** 设计的 [山音超级编剧大师](https://github.com/Shanyin-ai/shanyin-screenwriting-master)。固定版本及修改记录见 UPSTREAM.json 和来源说明；原许可证保留在 third_party。
+
+## 千问 Token Plan 连接
+
+使用套餐密钥时，将作品 short-drama.json 中 production.endpoint 设为 `https://token-plan.maas.qianwenaiapi.com/api/v1`，region 设为 `cn-beijing`；此连接不需要 workspace_id。`/compatible-mode/v1` 是对话接口地址，不用于视频生成。密钥仅从环境变量 DASHSCOPE_API_KEY 读取。

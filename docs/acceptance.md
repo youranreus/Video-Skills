@@ -38,3 +38,9 @@ python3 scripts/validate_skills.py
 ## skills CLI 安装验收
 
 2026-10-30：通过 `npx skills@latest` 在临时项目安装全部12技能，检查许可证与契约文件，并使用安装后的工具完成初始化及恢复。未修改用户全局安装。可运行 `python3 scripts/test_skills_install.py` 复现本地安装，远程验证加 `--source youranreus/Video-Skills`（需要网络与 Node.js）。
+
+## Token Plan 真实 API 烟测 · 2026-10-30
+
+用户授权后，在仓库外通过千问 Token Plan 官方 `/api/v1` 网关提交一次 wan3.0-video 文生视频：控制室巡检员，5秒、720P、16:9、无音频。提交、查询、下载成功；实际视频1280×720、30fps、150帧，ffmpeg完整解码退出0。凭据仅由本机环境读取，运行记录和媒体不进入仓库。
+
+这是直接 HTTP 连接烟测，不代表 starter 资产、整合生产任务、首尾帧、音频参考或 Qwen TTS 的真实端到端验收；内容质量待用户审看。未重投、未切换模型或计费通道。新增显式 Token Plan 端点支持，60项离线测试通过（本次1项混音跳过），12技能检查及修改代码 Ruff F 检查通过。

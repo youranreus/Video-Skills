@@ -87,7 +87,9 @@ prepare 为所有适用规则要求 parameters.rule_actions 中有具体落实�
 
 ## 官方连接与后期
 
-production.region 默认 cn-beijing，workspace_id 需真实值；endpoint 默认由地域与工作空间构建，也可显式配置同地域官方 HTTPS `/api/v1`。仅从 DASHSCOPE_API_KEY 环境变量读取凭据。不切换模型或地域兜底。
+production.region 默认 cn-beijing。百炼工作空间接口的 workspace_id 需真实值；endpoint 默认由地域与工作空间构建，也可显式配置同地域官方 HTTPS `/api/v1`。仅从 DASHSCOPE_API_KEY 环境变量读取凭据。不切换模型或地域兜底。
+
+千问 Token Plan 可显式设置 production.endpoint 为 `https://token-plan.maas.qianwenaiapi.com/api/v1`，region 为 cn-beijing，无需 workspace_id。凭据仍从 DASHSCOPE_API_KEY 读取，需与套餐匹配；不要使用对话接口的 `/compatible-mode/v1`。此网关仅显式选择，不自动替换百炼连接。文生视频已实测，Token Plan 下音频上传与 TTS 尚未验证；涉及临时 OSS 上传时仍需确认平台兼容性。
 
 Wan 图片以 Base64 输入，音频/视频通过同地域临时 OSS 上传。Qwen HTTP 非流式返回音频 URL，立即下载保存并测时。取回使用原任务 ID 或保存的 TTS 结果 URL，不重新合成。临时 URL 保存在私有运行元数据，不进入交付。
 
