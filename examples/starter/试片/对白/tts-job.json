@@ -1,0 +1,17 @@
+{
+  "job_id": "TTS-001",
+  "modality": "tts",
+  "adapter": "aliyun",
+  "prompt": "区域已经确认。",
+  "source": "剧集/EP001/配音单.md",
+  "outputs": [
+    "剧集/EP001/制作成果/audio/LINE-EP001-001-v001.wav"
+  ],
+  "parameters": {
+    "assets": [
+      "CHAR-LIN@v001"
+    ],
+    "line_id": "LINE-EP001-001",
+    "instruction": "普通话，平静清晰，句末自然收住。"
+  }
+}

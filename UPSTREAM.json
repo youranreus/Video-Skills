@@ -1,0 +1,10 @@
+{
+  "drama-skills": {
+    "url": "https://github.com/zenstory-ai/drama-skills",
+    "commit": "ed095d7b53682c24a3c76cc0dfaa148dde229ddb"
+  },
+  "shanyin": {
+    "url": "https://github.com/Shanyin-ai/shanyin-screenwriting-master",
+    "commit": "ca20ce245ae028e64418393d6cf4688b7dbe3d89"
+  }
+}

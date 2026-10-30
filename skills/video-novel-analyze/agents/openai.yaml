@@ -1,0 +1,4 @@
+interface:
+  display_name: "video-novel-analyze"
+  short_description: "对已有长篇原著进行改编分析和分集候选整理。"
+  default_prompt: "使用 $video-novel-analyze 完成当前阶段。"

@@ -1,0 +1,16 @@
+{
+  "job_id": "AUDITION-001",
+  "modality": "tts",
+  "adapter": "aliyun",
+  "prompt": "区域已经确认。",
+  "source": "剧集/EP001/配音单.md",
+  "outputs": [
+    "剧集/EP001/制作成果/audio/audition-v001.wav"
+  ],
+  "parameters": {
+    "audition": true,
+    "voice": null,
+    "line_id": "LINE-AUDITION-001",
+    "instruction": "普通话，平静清晰，句末自然收住。"
+  }
+}

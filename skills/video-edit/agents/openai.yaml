@@ -1,0 +1,4 @@
+interface:
+  display_name: "video-edit"
+  short_description: "将采用素材和对白音轨剪辑、混音并导出成片。"
+  default_prompt: "使用 $video-edit 完成当前阶段。"

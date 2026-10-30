@@ -1,0 +1,4 @@
+interface:
+  display_name: "video-develop"
+  short_description: "开发故事创意、世界观、角色关系和分集大纲。"
+  default_prompt: "使用 $video-develop 完成当前阶段。"

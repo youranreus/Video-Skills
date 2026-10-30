@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0-draft",
+  "video_skills_format": "video-skills/1",
+  "title": "林澄：控制室巡检",
+  "language": "zh-CN",
+  "format": {
+    "aspect_ratio": "16:9",
+    "prompt_language": "zh-CN"
+  },
+  "production": {
+    "region": "ap-southeast-1",
+    "workspace_id": null,
+    "endpoint": null,
+    "video_model": "wan3.0-video",
+    "tts_model": "qwen-audio-3.0-tts-plus",
+    "image_mode": "builtin-or-import"
+  }
+}

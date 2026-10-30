@@ -1,0 +1,33 @@
+{
+  "job_id": "ACTION-001",
+  "modality": "video",
+  "adapter": "aliyun",
+  "prompt": "从首帧开始，林澄听见右侧门外声响，迅速转身，右袖擦碰门框撕开一道小口，重心稳定落到尾帧位置。动作连续、实时速度，无对白，无配乐。",
+  "source": "剧集/EP001/视频提示词.md",
+  "source_entry": "MOTION-EP001-002",
+  "outputs": [
+    "剧集/EP001/制作成果/videos/MOTION-EP001-002-v001.mp4"
+  ],
+  "parameters": {
+    "mode": "first_last_frame",
+    "duration": 5,
+    "resolution": "720P",
+    "audio": false,
+    "assets": [
+      "CHAR-LIN@v001",
+      "LOC-ROOM@v001"
+    ],
+    "media": [
+      {
+        "path": "剧集/EP001/制作成果/images/action-start.png",
+        "record": "剧集/EP001/制作成果/images/action-start.png.md",
+        "type": "first_frame"
+      },
+      {
+        "path": "剧集/EP001/制作成果/images/action-end.png",
+        "record": "剧集/EP001/制作成果/images/action-end.png.md",
+        "type": "last_frame"
+      }
+    ]
+  }
+}

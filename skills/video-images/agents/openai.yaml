@@ -1,0 +1,4 @@
+interface:
+  display_name: "video-images"
+  short_description: "制作角色、场景、道具参考图或镜头关键帧，支持内置出图与外部导入。"
+  default_prompt: "使用 $video-images 完成当前阶段。"

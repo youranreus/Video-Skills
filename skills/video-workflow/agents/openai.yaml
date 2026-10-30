@@ -1,0 +1,4 @@
+interface:
+  display_name: "video-workflow"
+  short_description: "初始化或继续视频作品，选择阶段并查看进度。"
+  default_prompt: "使用 $video-workflow 完成当前阶段。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "video-assets"
+  short_description: "创建或复用项目级角色、场景、道具、造型和声音资产，追踪跨集状态。"
+  default_prompt: "使用 $video-assets 完成当前阶段。"

@@ -1,0 +1,33 @@
+{
+  "job_id": "DIALOGUE-001",
+  "modality": "video",
+  "adapter": "aliyun",
+  "prompt": "林澄站在操作台前，面部身份与构图参考 Image 1。用 Audio 1 的音色平静说：“区域已经确认。”说话时口型同步，其他时间自然呼吸。固定中近景，无配乐和字幕。",
+  "source": "剧集/EP001/视频提示词.md",
+  "source_entry": "MOTION-EP001-001",
+  "outputs": [
+    "剧集/EP001/制作成果/videos/MOTION-EP001-001-v001.mp4"
+  ],
+  "parameters": {
+    "mode": "reference",
+    "duration": 6,
+    "resolution": "720P",
+    "audio": true,
+    "assets": [
+      "CHAR-LIN@v001",
+      "LOC-ROOM@v001"
+    ],
+    "media": [
+      {
+        "path": "剧集/EP001/制作成果/images/dialogue.png",
+        "record": "剧集/EP001/制作成果/images/dialogue.png.md",
+        "type": "reference_image"
+      },
+      {
+        "path": "剧集/EP001/制作成果/audio/LINE-EP001-001-v001.wav",
+        "record": "剧集/EP001/制作成果/audio/LINE-EP001-001-v001.wav.md",
+        "type": "reference_audio"
+      }
+    ]
+  }
+}

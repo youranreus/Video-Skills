@@ -1,0 +1,4 @@
+interface:
+  display_name: "video-voice"
+  short_description: "为角色选择固定声线、生成逐句对白并检查音色与时长。"
+  default_prompt: "使用 $video-voice 完成当前阶段。"
