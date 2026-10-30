@@ -77,7 +77,7 @@ def init(root, title):
         "language": "zh-CN",
         "format": {"aspect_ratio": "16:9", "prompt_language": "zh-CN"},
         "production": {
-            "region": "ap-southeast-1",
+            "region": "cn-beijing",
             "workspace_id": None,
             "endpoint": None,
             "video_model": "wan3.0-video",

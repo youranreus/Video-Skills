@@ -8,7 +8,7 @@
     "prompt_language": "zh-CN"
   },
   "production": {
-    "region": "ap-southeast-1",
+    "region": "cn-beijing",
     "workspace_id": null,
     "endpoint": null,
     "video_model": "wan3.0-video",

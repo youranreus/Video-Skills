@@ -87,7 +87,7 @@ prepare 为所有适用规则要求 parameters.rule_actions 中有具体落实�
 
 ## 官方连接与后期
 
-production.region 默认 ap-southeast-1，workspace_id 需真实值；endpoint 默认由地域与工作空间构建，也可显式配置同地域官方 HTTPS `/api/v1`。仅从 DASHSCOPE_API_KEY 环境变量读取凭据。不切换模型或地域兜底。
+production.region 默认 cn-beijing，workspace_id 需真实值；endpoint 默认由地域与工作空间构建，也可显式配置同地域官方 HTTPS `/api/v1`。仅从 DASHSCOPE_API_KEY 环境变量读取凭据。不切换模型或地域兜底。
 
 Wan 图片以 Base64 输入，音频/视频通过同地域临时 OSS 上传。Qwen HTTP 非流式返回音频 URL，立即下载保存并测时。取回使用原任务 ID 或保存的 TTS 结果 URL，不重新合成。临时 URL 保存在私有运行元数据，不进入交付。
 

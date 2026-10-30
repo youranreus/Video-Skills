@@ -25,6 +25,14 @@ class IntegrationTests(unittest.TestCase):
         path.write_text(json.dumps(job))
         return engine.prepare_job(self.root, path)
 
+    def test_default_beijing_connection(self):
+        config = json.loads((self.root / "short-drama.json").read_text())
+        self.assertEqual(config["production"]["region"], "cn-beijing")
+        self.assertEqual(
+            adapter.endpoint({"region": "cn-beijing", "workspace_id": "test-workspace"}),
+            "https://test-workspace.cn-beijing.maas.aliyuncs.com/api/v1",
+        )
+
     def test_cross_episode_and_version_immutability(self):
         self.assertTrue(w.check(self.root)["ok"])
         _, old = w.asset(self.root, "CHAR-LIN@v001")
